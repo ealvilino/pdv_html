@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV - Sistema</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="nav-left">
+            <i class="fas fa-cash-register"></i>
+            <span>PDV</span>
+        </div>
+
+        <div class="nav-center">
+
+            <button onclick="handleAction('Menu Principal')" class="home-btn">
+                <i class="fas fa-house"></i>
+            </button>
+
+            <span id="nav-title">Menu Principal</span>
+
+        </div>
+
+        <div class="nav-right">
+            <button class="icon-btn">
+                <i class="fas fa-cog"></i>
+            </button>
+
+            <button class="icon-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+    </header>
+
+    <main class="container">
+        <section class="welcome-section">
+            <h1>Selecione uma opção no menu.</h1>
+            </br>
+        </section>
+
+        <div class="grid-menu">
+            <button class="card" onclick="handleAction('Venda Direta')">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Venda Direta</span>
+            </button>
+            <button class="card" onclick="handleAction('Entrada de Cliente')">
+                <i class="fas fa-user-check"></i>
+                <span>Entrada de Cliente</span>
+            </button>
+            <button class="card" onclick="handleAction('Entrega')">
+                <i class="fas fa-truck"></i>
+                <span>Entrega</span>
+            </button>
+            <button class="card" onclick="handleAction('Abrir Mesa')">
+                <i class="fas fa-door-open"></i>
+                <span>Abrir Mesa</span>
+            </button>
+            <button class="card" onclick="handleAction('Caixa')">
+                <i class="fas fa-cash-register"></i>
+                <span>Caixa</span>
+            </button>
+            <button class="card" onclick="handleAction('Fechar Mesa')">
+                <i class="fas fa-door-closed"></i>
+                <span>Fechar Mesa</span>
+            </button>
+            <button class="card" onclick="handleAction('Trocar Produtos')">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Trocar Produtos</span>
+            </button>
+            <button class="card" onclick="handleAction('estoque')">
+                <i class="fas fa-boxes"></i>
+                <span>Estoque</span>
+            </button>
+            <button class="card" onclick="handleAction('Relatorio de Vendas')">
+                <i class="fas fa-chart-line"></i>
+                <span>Relatorio de Vendas</span>
+            </button>
+            <button class="card" onclick="handleAction('Receita')">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Receita</span>
+            </button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
