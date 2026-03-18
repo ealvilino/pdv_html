@@ -51,10 +51,6 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span>Venda Direta</span>
             </button>
-            <button class="card" onclick="handleAction('Entrada de Cliente')">
-                <i class="fas fa-user-check"></i>
-                <span>Entrada de Cliente</span>
-            </button>
             <button class="card" onclick="handleAction('Entrega')">
                 <i class="fas fa-truck"></i>
                 <span>Entrega</span>
@@ -67,14 +63,6 @@
                 <i class="fas fa-cash-register"></i>
                 <span>Caixa</span>
             </button>
-            <button class="card" onclick="handleAction('Fechar Mesa')">
-                <i class="fas fa-door-closed"></i>
-                <span>Fechar Mesa</span>
-            </button>
-            <button class="card" onclick="handleAction('Trocar Produtos')">
-                <i class="fas fa-exchange-alt"></i>
-                <span>Trocar Produtos</span>
-            </button>
             <button class="card" onclick="handleAction('estoque')">
                 <i class="fas fa-boxes"></i>
                 <span>Estoque</span>
@@ -83,14 +71,28 @@
                 <i class="fas fa-chart-line"></i>
                 <span>Relatorio de Vendas</span>
             </button>
-            <button class="card" onclick="handleAction('Receita')">
-                <i class="fas fa-dollar-sign"></i>
-                <span>Receita</span>
-            </button>
         </div>
     </main>
 
     <script src="script.js"></script>
+
+    <div id="modal-mesa" class="modal hidden">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="fecharModal()">&times;</span>
+
+        <h2 id="modal-titulo">Mesa</h2>
+
+        <button onclick="adicionarItemModal()">➕ Adicionar Item</button>
+        <button onclick="atualizarModal()">🔄 Atualizar</button>
+
+        <div id="modal-detalhes"></div>
+
+    </div>
+
+</div>
+
 </body>
 
 </html>

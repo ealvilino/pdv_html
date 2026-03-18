@@ -1,0 +1,49 @@
+<div id="modal-mesa" class="modal">
+
+    <div class="modal-content">
+
+        <span id="btn-fechar" class="close">&times;</span>
+
+        <h2 id="modal-titulo">Mesa</h2>
+
+        <div>
+            <select id="select-produto"></select>
+            <input type="number" id="quantidade" value="1" min="1">
+            <button id="btn-adicionar">➕ Adicionar</button>
+        </div>
+
+        <button id="btn-atualizar">🔄 Atualizar</button>
+
+        <div id="modal-detalhes"></div>
+
+        <hr>
+
+        <div id="fechamento-container">
+
+            <h3>Fechamento</h3>
+
+            <label>Forma de pagamento:</label>
+            <select id="forma-pagamento">
+                <option value="PIX">Pix</option>
+                <option value="DINHEIRO">Dinheiro</option>
+                <option value="CARTAO">Cartão</option>
+            </select>
+            <div id="troco-container" style="display:none; margin-top:10px;">
+
+                <label>Valor recebido:</label>
+                <input type="number" id="valor-recebido" step="0.01" placeholder="Ex: 150">
+
+                <p>Troco: <strong id="troco">R$ 0.00</strong></p>
+
+            </div>
+
+            <br><br>
+
+            <button onclick="fecharMesa()">
+                Fechar Conta
+            </button>
+
+        </div>
+    </div>
+
+</div>
