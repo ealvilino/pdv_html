@@ -1,7 +1,25 @@
-<div style="margin-bottom: 20px;">
-    <h1>CONSTRUINDO</h1>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+    <div>
+        <h2 style="font-size: 20px;">Estoque e Catálogo</h2>
+        <p style="color: var(--text-muted); font-size: 14px;">Gerencie seus produtos, preços e disponibilidade.</p>
+    </div>
+    <button class="btn btn-primary" onclick="abrirModalNovoProduto()"><i class="fas fa-plus"></i> Adicionar Produto</button>
 </div>
 
-<section>
-    <h2>Gestão de Estoque</h2>
-</section>
+<div class="glass-table-wrapper" style="box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);">
+    <table class="glass-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome do Produto</th>
+                <th>Preço (R$)</th>
+                <th>Estoque Atual</th>
+                <th style="text-align: center;">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-estoque">
+            <!-- Renderizado via JS -->
+            <tr><td colspan="5" style="text-align:center; padding: 40px; color: var(--text-muted);">Carregando estoque...</td></tr>
+        </tbody>
+    </table>
+</div>

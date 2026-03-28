@@ -1,0 +1,52 @@
+<div style="display: flex; gap: 24px; height: calc(100vh - 150px);">
+    
+    <!-- Lado Esquerdo: Lista de Produtos -->
+    <div class="glass-card" style="flex: 2; align-items: flex-start; justify-content: flex-start; padding: 24px; overflow-y: auto;">
+        <h2 style="font-size: 20px; margin-bottom: 16px;">Catálogo de Produtos</h2>
+        <input type="text" id="venda-search" class="glass-input" placeholder="Pesquisar produto..." style="margin-bottom: 20px;" onkeyup="filtrarVendaDireta(this.value)">
+        
+        <div class="glass-grid" id="lista-produtos-venda" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; width: 100%;">
+            <!-- Produtos inseridos via JS -->
+        </div>
+    </div>
+
+    <!-- Lado Direito: Carrinho e Pagamento -->
+    <div class="glass-card" style="flex: 1; align-items: flex-start; justify-content: flex-start; padding: 24px; position: sticky; top: 0;">
+        <h2 style="font-size: 20px; margin-bottom: 16px;"><i class="fas fa-shopping-cart"></i> Carrinho Rápido</h2>
+        
+        <div id="venda-carrinho" style="width: 100%; flex: 1; overflow-y: auto; margin-bottom: 20px; min-height: 200px;">
+            <p style="text-align: center; color: var(--text-muted); margin-top: 50px;">Carrinho Vazio</p>
+        </div>
+        
+        <div style="width: 100%; border-top: 1px solid var(--glass-border); padding-top: 20px;">
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label style="font-size: 13px;">Nome Cliente (Para Comanda)</label>
+                <input type="text" id="venda-cliente" class="glass-input" placeholder="Opcional" style="padding: 8px 12px;">
+            </div>
+            
+            <button class="btn btn-outline" style="width: 100%; margin-bottom: 20px; padding: 10px;" onclick="imprimirComandaVenda()">
+                <i class="fas fa-print"></i> Imprimir Comanda (Conferência)
+            </button>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <span style="color: var(--text-muted);">Total a Pagar</span>
+                <h2 id="venda-total" style="color: var(--success);">R$ 0.00</h2>
+            </div>
+            
+            <div class="form-group">
+                <label>Forma de Pagamento</label>
+                <select id="venda-pagamento" class="glass-select">
+                    <option value="CRÉDITO">Cartão de Crédito</option>
+                    <option value="DÉBITO">Cartão de Débito</option>
+                    <option value="PIX">PIX</option>
+                    <option value="DINHEIRO">Dinheiro</option>
+                </select>
+            </div>
+
+            <button class="btn btn-success" style="width: 100%; padding: 16px;" onclick="finalizarVendaDireta()">
+                <i class="fas fa-check-circle"></i> Finalizar Venda
+            </button>
+        </div>
+    </div>
+
+</div>

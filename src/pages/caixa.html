@@ -1,0 +1,54 @@
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+    <div>
+        <h2 style="font-size: 20px;">Fluxo de Caixa Diário</h2>
+        <p style="color: var(--text-muted); font-size: 14px;">Resumo financeiro das operações de hoje.</p>
+    </div>
+    <div style="display: flex; gap: 12px;">
+        <button class="btn btn-outline"><i class="fas fa-print"></i> Imprimir</button>
+        <button class="btn btn-primary" onclick="alert('Suprimento/Sangria em breve')"><i class="fas fa-wallet"></i> Movimentação</button>
+    </div>
+</div>
+
+<div class="glass-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 32px;">
+    <!-- Cards de Resumo -->
+    <div class="glass-card" style="align-items: flex-start; text-align: left; padding: 24px;">
+        <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 12px;">
+            <span style="color: var(--text-muted); font-size: 14px; font-weight: 500;">Vendas Totais Hoje</span>
+            <i class="fas fa-chart-line" style="background: var(--success); -webkit-background-clip: text; font-size: 18px;"></i>
+        </div>
+        <h1 id="caixa-total" style="font-size: 32px; color: white;">R$ 0.00</h1>
+    </div>
+
+    <div class="glass-card" style="align-items: flex-start; text-align: left; padding: 24px;">
+        <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 12px;">
+            <span style="color: var(--text-muted); font-size: 14px; font-weight: 500;">Quantidade de Pedidos</span>
+            <i class="fas fa-receipt" style="background: var(--info); -webkit-background-clip: text; font-size: 18px;"></i>
+        </div>
+        <h1 id="caixa-pedidos" style="font-size: 32px; color: white;">0</h1>
+    </div>
+
+    <div class="glass-card" style="align-items: flex-start; text-align: left; padding: 24px;">
+        <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 12px;">
+            <span style="color: var(--text-muted); font-size: 14px; font-weight: 500;">Ticket Médio</span>
+            <i class="fas fa-tag" style="background: var(--warning); -webkit-background-clip: text; font-size: 18px;"></i>
+        </div>
+        <h1 id="caixa-ticket" style="font-size: 32px; color: white;">R$ 0.00</h1>
+    </div>
+</div>
+
+<h3 style="margin-bottom: 16px; font-size: 16px;">Vendas Recentes</h3>
+<div class="glass-table-wrapper">
+    <table class="glass-table">
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Origem</th>
+                <th>Status</th>
+                <th>Valor (R$)</th>
+            </tr>
+        </thead>
+        <tbody id="caixa-vendas">
+            <tr><td colspan="4" style="text-align: center; color: var(--text-muted); padding: 20px;">Carregando fluxo...</td></tr>
+        </tbody>
+    </table>
+</div>
